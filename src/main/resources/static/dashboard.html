@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Escuela de Música</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content-wrapper {
+      flex: 1;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    footer {
+      width: 100%;
+      margin-top: auto;
+    }
+    .card {
+      border-radius: 0.75rem; /* Bordes más suaves para las tarjetas */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+    }
+    .list-group-item.list-group-item-action:hover {
+      background-color: #e9ecef; /* Efecto hover en las listas */
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Escuela de Música</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/dashboard.html">Inicio</a>
+          </li>
+          <li class="nav-item d-none" id="navLinkCursos">
+            <a class="nav-link" href="/cursos.html">Cursos</a>
+          </li>
+          <li class="nav-item d-none" id="navLinkEstudiantes">
+            <a class="nav-link" href="/estudiantes.html">Estudiantes</a>
+          </li>
+          <li class="nav-item d-none" id="navLinkProfesores">
+            <a class="nav-link" href="/profesores.html">Profesores</a>
+          </li>
+          <li class="nav-item d-none" id="navGestionUsuarios">
+            <a class="nav-link" href="/user-management.html">Gestión de Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-danger btn-sm" id="logoutButton">Cerrar Sesión</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="content-wrapper container mt-4">
+  <h1 class="text-center mb-4 text-primary">Bienvenido al Panel de Control</h1>
+  <p class="lead text-center text-muted">Aquí podrás gestionar la información de la escuela de música según tu rol.</p>
+
+  <div id="welcomeMessage" class="alert alert-info text-center" role="alert">
+    Cargando información de usuario...
+  </div>
+
+  <div class="row mt-5">
+    <div id="adminFeatures" class="col-md-6 mb-4 d-none">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title text-primary"><i class="fas fa-user-shield me-2"></i>Funciones de Administrador</h2>
+          <p class="card-text">Como administrador, tienes acceso completo a la gestión de:</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/cursos.html" class="list-group-item-action d-flex justify-content-between align-items-center">Cursos <i class="fas fa-chalkboard-teacher text-info"></i></a></li>
+            <li class="list-group-item"><a href="/estudiantes.html" class="list-group-item-action d-flex justify-content-between align-items-center">Estudiantes <i class="fas fa-user-graduate text-success"></i></a></li>
+            <li class="list-group-item"><a href="/profesores.html" class="list-group-item-action d-flex justify-content-between align-items-center">Profesores <i class="fas fa-person-chalkboard text-warning"></i></a></li>
+            <li class="list-group-item"><a href="/user-management.html" class="list-group-item-action d-flex justify-content-between align-items-center">Gestión de Usuarios <i class="fas fa-users-cog text-primary"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="userFeatures" class="col-md-6 mb-4 d-none">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title text-info"><i class="fas fa-user me-2"></i>Funciones de Usuario</h2>
+          <p class="card-text">Como usuario, puedes ver los listados de:</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/cursos.html" class="list-group-item-action d-flex justify-content-between align-items-center">Cursos <i class="fas fa-book text-info"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-dark text-white py-3 text-center">
+  <div class="container">
+    <p class="mb-0">&copy; 2024 Mi Escuela de Música. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/your_font_awesome_kit_code.js" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
