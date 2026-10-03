@@ -6,7 +6,7 @@ Este proyecto es un sistema de gestión de cursos simple, desarrollado como un e
 
 ### Backend (Spring Boot)
 
-* **Java 17 (o superior):** Lenguaje de programación.
+* **Java 21 :** Lenguaje de programación.
 * **Spring Boot 3.x:** Framework principal para el desarrollo rápido de aplicaciones Java.
 * **Spring Security:** Para la autenticación (JWT) y autorización basada en roles.
 * **Spring Data JPA:** Para la interacción con la base de datos de manera simplificada.
@@ -73,7 +73,7 @@ El sistema soporta los siguientes roles:
 
 ### Requisitos Previos
 
-* Java Development Kit (JDK) 17 o superior.
+* Java Development Kit (JDK) 21.
 * Maven 3.x.
 * **Servidor PostgreSQL:** Con una base de datos creada (ej. `gestion_cursos`).
 * Un editor de código o IDE (IntelliJ IDEA, VS Code, Eclipse).
